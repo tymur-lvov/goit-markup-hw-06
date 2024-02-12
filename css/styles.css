@@ -19,6 +19,7 @@
 body {
     font-family: var(--font-family);
     color: var(--slate);
+    background-color: var(--white);
 }
 
 a {
@@ -37,6 +38,7 @@ p {
 
 button {
     cursor: pointer;
+    border: none;
 
     padding: 0;
 }
@@ -50,6 +52,7 @@ ol {
 }
 
 img {
+    max-width: 100%;
     display: block;
 }
 
@@ -57,88 +60,302 @@ input {
     padding: 0;
 }
 
-/* Header */
-.header {}
+:focus {
+    outline: none;
+}
 
-.header-container {}
+.section {
+    padding: 96px 0;
+}
+
+.container {
+    width: 288px;
+    padding: 0 1px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    padding: 16px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
 
 /* Navigation */
 .header-navigation {}
 
-.header-logo {}
+/* Logo */
+.header-logo {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
+
+    margin-right: 149px;
+}
+
+.header-logo-accent {
+    color: var(--navy-blue);
+}
 
 /* Mobile menu */
-.header-mobile-menu-button {}
+.header-mobile-menu-button {
+    background-color: transparent;
+    border: none;
 
-.header-mobile-menu-icon {}
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-mobile-menu-icon {
+    fill: #2f2f37;
+
+    width: 18px;
+    height: 16px;
+}
 
 /* Hero section */
-.hero-section {}
+.hero-section {
+    background-color: var(--navy-blue);
 
-.hero-container {}
+    padding: 72px 0;
+}
 
-.hero-title {}
+.hero-section .container {}
 
-.hero-button {}
+.hero-title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--white);
+
+    width: 216px;
+    margin: 0 auto;
+    margin-bottom: 72px;
+}
+
+.hero-button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background-color: var(--iris);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+    width: 169px;
+    height: 56px;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--ocean);
+}
 
 /* Features section */
-.features-section {}
-
-.features-container {}
-
-.features-title {}
+.features-title {
+    display: none;
+}
 
 .features-list {}
 
-.features-item {}
+.features-item:not(:last-child) {
+    margin-bottom: 72px;
+}
 
-.features-sub-title {}
+.features-sub-title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
 
-.features-description {}
+    margin-bottom: 8px;
+}
+
+.features-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 
 /* Team section */
-.team-section {}
+.team-title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
 
-.team-container {}
+    margin-bottom: 72px;
+}
 
-.team-title {}
+.team-list {
+    width: 264px;
+    margin: 0 auto;
+}
 
-.team-list {}
+.team-item {
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 
-.team-item {}
+    padding-bottom: 24px;
+}
 
-.team-image {}
+.team-item:not(:last-child) {
+    margin-bottom: 72px;
+}
 
-.team-item-container {}
+.team-image {
+    margin-bottom: 32px;
+}
 
-.team-sub-title {}
+.team-item-container {
+    text-align: center;
 
-.team-description {}
+    margin: 0 auto;
+}
 
-.team-social-list {}
+.team-sub-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+
+    margin-bottom: 8px;
+}
+
+.team-description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 8px;
+
+}
+
+.team-social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
 
 .team-social-item {}
 
-.team-social-link {}
+.team-social-link {
+    background-color: var(--iris);
+    border-radius: 50%;
 
-.team-social-icon {}
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item:hover .team-social-link {
+    background-color: var(--ocean);
+}
+
+.team-social-link:focus {
+    background-color: var(--ocean);
+}
+
+.team-social-icon {
+    width: 16px;
+    height: 16px;
+}
 
 /* Portfolio section */
-.portfolio-section {}
+.portfolio-title {
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
 
-.portfolio-container {}
+    margin-bottom: 72px;
+}
 
-.portfolio-title {}
+.portfolio-list {
+    width: 288px;
+}
 
-.portfolio-list {}
+.portfolio-item {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 
-.portfolio-item {}
+.portfolio-item:hover,
+.portfolio-item:focus-within {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+
+.portfolio-item:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.portfolio-link {
+    color: inherit;
+}
 
 .portfolio-image {}
 
-.portfolio-sub-title {}
+.portfolio-overlay {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    background-color: var(--iris);
 
-.portfolio-description {}
+    width: 288px;
+    height: 280px;
+    padding: 40px 32px;
+}
+
+.portfolio-overlay-description {}
+
+.portfolio-item-container {
+    padding: 32px 16px;
+}
+
+.portfolio-sub-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+
+    margin-bottom: 8px;
+}
+
+.portfolio-description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 
 /* Footer */
 .footer {}
