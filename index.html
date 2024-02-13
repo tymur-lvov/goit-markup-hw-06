@@ -2,49 +2,58 @@
 <html lang="en">
 
 <head>
+    <!-- #region Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
+    <!-- #endregion Meta -->
+    <!-- #region Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
         integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- #endregion Normalize -->
+    <!-- #region Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <!-- #endregion Fonts -->
+    <!-- #region External Stylesheet -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- #endregion External Stylesheet -->
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- #region Header -->
     <header class="header">
         <div class="container">
-            <!-- Navigation -->
+            <!-- #region Navigation -->
             <nav class="header-navigation">
-                <!-- Logo -->
-                <a href="" class="header-logo">Web<span class="header-logo-accent">Studio</span></a>
+                <a href="./index.html" class="header-logo">Web<span class="header-logo-accent">Studio</span></a>
             </nav>
-
-            <!-- Mobile menu -->
+            <!-- #endregion Navigation -->
+            <!-- #region Mobile Menu Button-->
             <button class="header-mobile-menu-button" type="button">
                 <svg class="header-mobile-menu-icon">
                     <use href="./images/icons.svg#icon-Group"></use>
                 </svg>
             </button>
+            <!-- #endregion Mobile Menu Button-->
         </div>
     </header>
+    <!-- #endregion Header -->
 
-    <!-- Main -->
+    <!-- #region Main -->
     <main class="main">
-        <!-- Hero section -->
+        <!-- #region Hero Section -->
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                 <button class="hero-button" type="button">Order Service</button>
             </div>
         </section>
-
-        <!-- Features section -->
+        <!-- #endregion Hero Section -->
+        <!-- #region Features Section -->
         <section class="section">
             <div class="container">
                 <h2 class="features-title">Features</h2>
@@ -76,8 +85,8 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Team section -->
+        <!-- #endregion Features Section -->
+        <!-- #region Team Section -->
         <section class="section">
             <div class="container">
                 <h2 class="team-title">Our Team</h2>
@@ -237,24 +246,26 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Portfolio section -->
+        <!-- #endregion Team Section -->
+        <!-- #region Portfolio Section -->
         <section class="section">
             <div class="container">
                 <h2 class="portfolio-title">Our Portfolio</h2>
                 <ul class="portfolio-list">
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="./images/@1x/mobile/project-one@1x.jpg 1x, ./images/@2x/mobile/project-one@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-one@1x.jpg" alt="banking-app-interface-showcase"
-                                    class="portfolio-image">
-                            </picture>
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
-                                    Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
-                                    Cloud Storage App</p>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="./images/@1x/mobile/project-one@1x.jpg 1x, ./images/@2x/mobile/project-one@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-one@1x.jpg"
+                                        alt="banking-app-interface-showcase" class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
                             </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Banking App</h3>
@@ -264,12 +275,19 @@
                     </li>
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="./images/@1x/mobile/project-two@1x.jpg 1x, ./images/@2x/mobile/project-two@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-two@1x.jpg" alt="cashless-payment-operation"
-                                    class="portfolio-image">
-                            </picture>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="./images/@1x/mobile/project-two@1x.jpg 1x, ./images/@2x/mobile/project-two@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-two@1x.jpg" alt="cashless-payment-operation"
+                                        class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
+                            </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Cashless Payment</h3>
                                 <p class="portfolio-description">Marketing</p>
@@ -278,12 +296,19 @@
                     </li>
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="./images/@1x/mobile/project-three@1x.jpg 1x, ./images/@2x/mobile/project-three@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-three@1x.jpg"
-                                    alt="meditation-app-showcase-on-laptop" class="portfolio-image">
-                            </picture>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="./images/@1x/mobile/project-three@1x.jpg 1x, ./images/@2x/mobile/project-three@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-three@1x.jpg"
+                                        alt="meditation-app-showcase-on-laptop" class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
+                            </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Meditation App</h3>
                                 <p class="portfolio-description">App</p>
@@ -292,12 +317,19 @@
                     </li>
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="./images/@1x/mobile/project-four@1x.jpg 1x, ./images/@2x/mobile/project-four@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-four@1x.jpg"
-                                    alt="driver-using-mobile-app-while-driving" class="portfolio-image">
-                            </picture>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="./images/@1x/mobile/project-four@1x.jpg 1x, ./images/@2x/mobile/project-four@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-four@1x.jpg"
+                                        alt="driver-using-mobile-app-while-driving" class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
+                            </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Taxi Service</h3>
                                 <p class="portfolio-description">Marketing</p>
@@ -306,12 +338,19 @@
                     </li>
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source
-                                    srcset="./images/@1x/mobile/project-five@1x.jpg 1x, ./images/@2x/mobile/project-five@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-five@1x.jpg"
-                                    alt="screen-illustrations-showcase-on-mobile" class="portfolio-image">
-                            </picture>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/@1x/mobile/project-five@1x.jpg 1x, ./images/@2x/mobile/project-five@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-five@1x.jpg"
+                                        alt="screen-illustrations-showcase-on-mobile" class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
+                            </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Screen Illustrations</h3>
                                 <p class="portfolio-description">Design</p>
@@ -320,12 +359,19 @@
                     </li>
                     <li class="portfolio-item">
                         <a href="" class="portfolio-link">
-                            <picture>
-                                <source
-                                    srcset="./images/@1x/mobile/project-six@1x.jpg 1x, ./images/@2x/mobile/project-six@2x.jpg 2x">
-                                <img src="./images/@1x/mobile/project-six@1x.jpg" alt="smiling-woman-using-mobile"
-                                    class="portfolio-image">
-                            </picture>
+                            <div class="portfolio-thumb">
+                                <picture>
+                                    <source
+                                        srcset="./images/@1x/mobile/project-six@1x.jpg 1x, ./images/@2x/mobile/project-six@2x.jpg 2x">
+                                    <img src="./images/@1x/mobile/project-six@1x.jpg" alt="smiling-woman-using-mobile"
+                                        class="portfolio-image">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <p class="portfolio-overlay-description">14 Stylish and User-Friendly App Design
+                                        Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
+                                        Cloud Storage App</p>
+                                </div>
+                            </div>
                             <div class="portfolio-item-container">
                                 <h3 class="portfolio-sub-title">Online Courses</h3>
                                 <p class="portfolio-description">Marketing</p>
@@ -335,76 +381,81 @@
                 </ul>
             </div>
         </section>
+        <!-- #endregion Portfolio Section -->
     </main>
+    <!-- #endregion Main -->
 
-    <!-- Footer -->
+    <!-- #region Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- Logo -->
+            <!--#region Logo & CTA -->
             <div class="footer-logo-container">
-                <a href="" class="footer-logo">Web
-                    Studio</a>
+                <a href="" class="footer-logo">Web<span class="footer-logo-accent">Studio</span></a>
                 <p class="footer-description">Increase the flow of customers and sales for your business with digital
                     marketing & growth solutions.</p>
             </div>
-
-            <!-- Social -->
+            <!--#endregion Logo & CTA -->
+            <!--#region Social -->
             <div class="footer-social-container">
                 <p class="footer-social-title">Social media</p>
                 <ul class="footer-social-list">
-                    <li class="footer-social-list-item">
-                        <a href="" class="footer-social-list-link">
-                            <svg class="footer-social-list-icon" width="24" height="24">
+                    <li class="footer-social-item">
+                        <a href="" class="footer-social-link">
+                            <svg class="footer-social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-instagram-2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-social-list-item">
-                        <a href="" class="footer-social-list-link">
-                            <svg class="footer-social-list-icon" width="24" height="24">
+                    <li class="footer-social-item">
+                        <a href="" class="footer-social-link">
+                            <svg class="footer-social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-twitter-1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-social-list-item">
-                        <a href="" class="footer-social-list-link">
-                            <svg class="footer-social-list-icon" width="24" height="24">
+                    <li class="footer-social-item">
+                        <a href="" class="footer-social-link">
+                            <svg class="footer-social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-facebook-1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-social-list-item">
-                        <a href="" class="footer-social-list-link">
-                            <svg class="footer-social-list-icon" width="24" height="24">
+                    <li class="footer-social-item">
+                        <a href="" class="footer-social-link">
+                            <svg class="footer-social-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-linkedin-1"></use>
                             </svg>
                         </a>
                     </li>
                 </ul>
             </div>
-
-            <!-- Subscription -->
+            <!--#endregion Social -->
+            <!-- #region Subscription -->
             <div class="footer-subscription-container">
                 <p class="footer-subscription-title">Subscribe</p>
                 <form action="" class="footer-subscription-form">
                     <label for="" class="footer-subscription-label">
-                        <input type="text" class="footer-subscription-input">
+                        <input type="text" class="footer-subscription-input" placeholder="E-mail">
                     </label>
-                    <button class="footer-subscription-button">Subscribe<svg class="footer-subscription-icon" width="24"
-                            height="24">
+                    <button type="submit" class="footer-subscription-button">Subscribe<svg
+                            class="footer-subscription-icon" width="24" height="24">
                             <use href="./images/icons.svg#icon-Frame-3"></use>
                         </svg>
                     </button>
                 </form>
             </div>
+            <!-- #endregion Subscription -->
         </div>
     </footer>
+    <!-- #endregion Footer -->
 </body>
 
 </html>
 
+<!-- #region Notes -->
 <!--
 (max-width: 767px)
 (min-width: 768px)
 (min-width: 1158px)
 -->
+<!-- #endregion Notes -->
