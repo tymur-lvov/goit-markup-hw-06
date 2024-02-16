@@ -110,7 +110,7 @@ input {
 .header .container {}
 
 /* #region Navigation */
-.header-navigation {}
+.header-nav {}
 
 .header-logo {
     font-family: var(--second-family);
@@ -150,8 +150,8 @@ input {
 .header-mobile-menu-icon {
     fill: #2f2f37;
 
-    width: 18px;
-    height: 16px;
+    width: 100%;
+    height: 100%;
 }
 
 /* #endregion Mobile Menu Button */
@@ -163,8 +163,8 @@ input {
 .hero {
     background-color: var(--navy-blue);
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/@1x/mobile/hero/hero-@1x.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     padding: 72px 0;
 }
@@ -326,6 +326,8 @@ input {
 }
 
 .team-social-icon {
+    fill: var(--cloud);
+
     width: 16px;
     height: 16px;
 }
@@ -513,7 +515,9 @@ input {
     background-color: var(--green);
 }
 
-.footer-social-icon {}
+.footer-social-icon {
+    fill: var(--cloud);
+}
 
 /* #endregion Social  */
 /* #region Subscription */
@@ -585,10 +589,66 @@ input {
     background-color: var(--ocean);
 }
 
-.footer-subscription-icon {}
+.footer-subscription-icon {
+    fill: var(--white);
+}
 
 /* #endregion Subscription */
 /* #endregion Footer */
+
+/* #region Mobile Menu */
+.mobile-menu {
+    background-color: var(--white);
+
+    width: 100%;
+    height: 100%;
+    padding: 72px 16px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mobile-menu-button {
+    background-color: rgba(231, 233, 252, 0.1);
+    border: 1px solid var(--cornflower);
+    border-radius: 50%;
+
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.mobile-menu-button-icon {
+    fill: var(--navy-blue);
+}
+
+.mobile-menu-nav {}
+
+.mobile-menu-nav-list {}
+
+.mobile-menu-nav-item {}
+
+.mobile-menu-nav-link {}
+
+.mobile-menu-address {}
+
+.mobile-menu-address-list {}
+
+.mobile-menu-address-item {}
+
+.mobile-menu-address-link {}
+
+.mobile-menu-social-list {}
+
+.mobile-menu-social-item {}
+
+.mobile-menu-social-link {}
+
+.mobile-menu-social-icon {}
+
+/* #endregion Mobile Menu */
 
 
 /* #region Notes */
