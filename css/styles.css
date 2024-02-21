@@ -69,6 +69,9 @@ input {
     padding: 0;
 }
 
+/* #endregion Base */
+
+/* #region Common */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -97,9 +100,12 @@ input {
     margin: 0 auto;
 }
 
-/* #endregion Base */
+@media (min-width: 768px) {
+    .container {
+        width: 738px;
+    }
+}
 
-/* #region Common */
 /* #endregion Common */
 
 /* #region Header */
@@ -107,10 +113,18 @@ input {
     position: relative;
 }
 
-.header .container {}
+@media (min-width: 768px) {
+    .header .container {
+        display: flex;
+    }
+}
 
 /* #region Navigation */
-.header-nav {}
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+    }
+}
 
 .header-logo {
     font-family: var(--second-family);
@@ -126,11 +140,59 @@ input {
     padding: 16px 0;
 }
 
+@media (min-width: 768px) {
+    .header-logo {
+        margin-right: 120px;
+    }
+}
+
 .header-logo-accent {
     color: var(--navy-blue);
 }
 
+
+.header-nav {}
+
+.nav-list {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-list {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+.nav-item {}
+
+.nav-link {
+    display: block;
+    padding: 24px 0;
+}
+
+.current {}
+
 /* #endregion Navigation */
+
+/* #region Address */
+.address {}
+
+.address-list {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .address-list {
+        display: flex;
+    }
+}
+
+.address-item {}
+
+.address-link {}
+
+/* #endregion Address */
 
 /* #region Mobile Menu Button */
 .header-mobile-menu-button {
@@ -145,6 +207,12 @@ input {
     position: absolute;
     top: 16px;
     right: 16px;
+}
+
+@media (min-width: 768px) {
+    .header-mobile-menu-button {
+        display: none;
+    }
 }
 
 .header-mobile-menu-icon {
@@ -803,7 +871,6 @@ input {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:hover,
 .modal-form-input:focus {
     border-color: var(--iris);
 }
@@ -815,7 +882,6 @@ input {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.modal-form-input:hover+.modal-form-icon,
 .modal-form-input:focus+.modal-form-icon {
     fill: var(--iris);
 }
@@ -827,6 +893,7 @@ input {
 
 .modal-form-input.textarea {
     resize: none;
+    font-size: 12px;
 
     width: 256px;
     height: 120px;
@@ -835,7 +902,6 @@ input {
 }
 
 .modal-form-input.textarea::placeholder {
-    font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--light-slate);
