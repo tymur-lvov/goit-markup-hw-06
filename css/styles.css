@@ -1217,7 +1217,7 @@ input {
     background-color: rgba(46, 47, 66, 0.4);
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -1237,6 +1237,13 @@ input {
     transform: translate(-50%, -50%);
 }
 
+@media only screen and (min-width: 768px) {
+    .contacts.modal {
+        width: 408px;
+        height: 584px;
+    }
+}
+
 .contacts .close-button {
     background-color: var(--cornflower);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1250,9 +1257,16 @@ input {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts .close-button:hover,
-.contacts .close-button:focus {
+.contacts .close-button:active {
     background-color: var(--ocean);
+}
+
+@media only screen and (min-width: 1158px) {
+
+    .contacts .close-button:hover,
+    .contacts .close-button:focus {
+        background-color: var(--ocean);
+    }
 }
 
 .contacts .close-icon {
@@ -1261,9 +1275,16 @@ input {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts .close-button:hover .close-icon,
-.contacts .close-button:focus .close-icon {
+.contacts .close-button:active .close-icon {
     fill: var(--white);
+}
+
+@media only screen and (min-width: 1158px) {
+
+    .contacts .close-button:hover .close-icon,
+    .contacts .close-button:focus .close-icon {
+        fill: var(--white);
+    }
 }
 
 .modal-title {
@@ -1279,15 +1300,25 @@ input {
 
 .modal-form {}
 
-.modal-form-field {}
+.modal-form-field {
+    width: 256px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-form-field {
+        width: 360px;
+    }
+}
 
 .modal-form-label {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--light-slate);
 
     display: block;
+
     margin-bottom: 4px;
 }
 
@@ -1301,14 +1332,25 @@ input {
     border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
 
-    width: 256px;
+    width: 100%;
     height: 40px;
     padding: 11px 34px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (min-width: 1158px) {
+    .modal-form-input {
+        padding: 11px 38px;
+    }
+}
+
 .modal-form-input:focus {
     border-color: var(--iris);
+}
+
+.modal-form-icon.person {
+    top: 11px;
+    left: 16px;
 }
 
 .modal-form-icon {
@@ -1322,18 +1364,14 @@ input {
     fill: var(--iris);
 }
 
-.modal-form-icon.person {
-    top: 11px;
-    left: 16px;
-}
-
 .modal-form-input.textarea {
     resize: none;
     font-size: 12px;
 
-    width: 256px;
+    width: 100%;
     height: 120px;
     padding: 8px 16px;
+
     margin-bottom: 16px;
 }
 
@@ -1344,11 +1382,26 @@ input {
     opacity: 0.5;
 }
 
+.modal-form-label.policy {
+    margin-bottom: 0;
+}
+
 .policy-container {
+    width: 256px;
     display: flex;
     align-items: center;
     gap: 8px;
+
     margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .policy-container {
+        width: 360px;
+        margin: 0 auto;
+
+        margin-bottom: 24px;
+    }
 }
 
 .custom-checkbox {
@@ -1370,8 +1423,10 @@ input {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:focus+.modal-form-label .custom-checkbox {
-    border-color: var(--ocean)
+@media only screen and (min-width: 1158px) {
+    .checkbox:focus+.modal-form-label .custom-checkbox {
+        border-color: var(--ocean)
+    }
 }
 
 .checkbox:checked+.modal-form-label .custom-checkbox {
@@ -1392,9 +1447,16 @@ input {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.policy-link:hover,
-.policy-link:focus {
+.policy-link:active {
     color: var(--ocean);
+}
+
+@media only screen and (min-width: 1158px) {
+
+    .policy-link:hover,
+    .policy-link:focus {
+        color: var(--ocean);
+    }
 }
 
 .modal-form-button {
@@ -1414,9 +1476,16 @@ input {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-button:hover,
-.modal-form-button:focus {
+.modal-form-button:active {
     background-color: var(--ocean);
+}
+
+@media only screen and (min-width: 1158px) {
+
+    .modal-form-button:hover,
+    .modal-form-button:focus {
+        background-color: var(--ocean);
+    }
 }
 
 /* #endregion Mobile Contacts Modal*/
